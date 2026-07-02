@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mikeymon</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<style>
+  :root {
+    /* --color-primary: #ad8236; */
+  }
+  .secondary-font {
+    font-family: ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  }
+  .main-font {
+    font-family: SF Pro Rounded,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  }
+</style>
+  </head>
+  <body class="flex  items-center flex-col">
+    <div class="flex p-3 w-full gap-3">
+      <span class="text hover:text-secondary hover:link hover:underline hover:cursor-pointer">articles</span>
+      <span class="text hover:text-primary hover:link hover:underline hover:cursor-pointer">models</span>
+    </div>
+   
+    <main>
+      <article id="content" class="prose max-w-none">async function loadDoc(name) {
+  const response = await fetch(`/docs/${name}.md`);
+  const markdown = await response.text();
+
+  // marked.js
+  content.innerHTML = marked.parse(markdown);
+}
+
+loadDoc("getting-started");</article>
+    </main>
+  
+  </body>
+</html>
