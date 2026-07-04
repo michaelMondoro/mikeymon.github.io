@@ -1,5 +1,9 @@
 
-.main-font {
+p {
   font-family: 'Courier New'
 }
 
+body {
+  width: 50%;
+
+}
